@@ -5,12 +5,16 @@ class ShopProduct {
     {
         return 'The Object shout not be print or echo!';
     }
+
+    public $title = '商品标题';
+    public $producerMainName = 'main name';
+    public $producerFirstName = 'first name';
+    public $price = 0;
+
+
 }
 
 $product1 = new ShopProduct;
-$product2 = new ShopProduct;
 
+echo $product1->title;
 
-// var_dump($product1);
-// var_dump($product2);
-echo $product1;
