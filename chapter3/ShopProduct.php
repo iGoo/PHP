@@ -11,12 +11,12 @@ class ShopProduct {
     {
         $this->title = $title;
         $this->producerMainName = $producerMainName;
-        $this->producerFirstName = $producerMainName;
+        $this->producerFirstName = $producerFirstName;
         $this->price = $price;
     }
 
 
 }
 
-$product = new ShopProduct('Apple', 'Json', 'Cao', 100);
-var_dump($product->title, $product->producerMainName);
+// $product = new ShopProduct('Apple', 'Json', 'Cao', 100);
+// var_dump($product->title, $product->producerMainName);
