@@ -1,7 +1,7 @@
 <?php
 require 'ShopProduct.php';
 class ShopProductWriter {
-	public function write($shopProduct)
+	public function write(ShopProduct $shopProduct)
 	{
 		$str = "$shopProduct->title" .
 				"$shopProduct->producerMainName" .
