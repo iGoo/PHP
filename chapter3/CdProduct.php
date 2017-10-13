@@ -17,8 +17,9 @@ class CdProduct extends ShopProduct
 
 	public function getSummaryLine()
 	{
-		$base = "$this->title ( $this->producerMainName";
-		$base .= "$this->producerFirstName )";
+		// $base = "$this->title ( $this->producerMainName";
+		// $base .= "$this->producerFirstName )";
+		$base = parent::getSummaryLine();
 		$base .= ":palying time - $this->playLength";
 
 		return $base;

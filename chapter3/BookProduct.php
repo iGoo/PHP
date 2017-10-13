@@ -22,10 +22,9 @@ class BookProduct extends ShopProduct
 
 		return $base;
 	}
-
 }
 
-
-
+$book = new BookProduct('Redis实战', 'Peng', 'Cao', 58, 203);
+echo $book->getSummaryLine();
 
 
