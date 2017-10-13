@@ -1,5 +1,5 @@
 <?php
-require 'ShopProduct.php';
+require 'Loader.php';
 class ShopProductWriter {
 	public function write(ShopProduct $shopProduct)
 	{

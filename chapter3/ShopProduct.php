@@ -2,10 +2,10 @@
 
 class ShopProduct {
 
-    public $title = '商品标题';
-    public $producerMainName = 'main name';
-    public $producerFirstName = 'first name';
-    public $price = 0;
+    public $title;
+    public $producerMainName;
+    public $producerFirstName;
+    public $price;
 
     function __construct($title, $producerMainName, $producerFirstName, $price)
     {
@@ -15,8 +15,17 @@ class ShopProduct {
         $this->price = $price;
     }
 
+    public function getProducer()
+    {
+        return "{$this->producerFirstName} {$this->producerMainName}";
+    }
+
+    public function getSummaryLine()
+    {
+        $base = "{$this->title} ( {$this->producerMainName}, ";
+        $base .= "{$this->producerFirstName} )";
+
+        return $base;
+    }
 
 }
-
-// $product = new ShopProduct('Apple', 'Json', 'Cao', 100);
-// var_dump($product->title, $product->producerMainName);
