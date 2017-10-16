@@ -2,6 +2,9 @@
 
 class ShopProduct {
 
+    const AVAILABLE = 0;
+    const OUT_OF_STOCK = array(1, 2, 3); 
+
     public $title;
     public $producerMainName;
     public $producerFirstName;
@@ -27,5 +30,4 @@ class ShopProduct {
 
         return $base;
     }
-
 }
