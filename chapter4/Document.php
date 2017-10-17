@@ -2,9 +2,13 @@
 require 'Loader.php';
 
 class Document extends Domain {
-	// public static function create() {
-	// 	return new self;
-	// }
+	public static function getGroup() {
+		return 'document-group';
+	}
 }
 
-print_r(Document::create());
+class SpreadSheet extends Document
+{
+
+}
+print_r(SpreadSheet::create());
