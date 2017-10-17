@@ -2,9 +2,10 @@
 require 'Loader.php';
 
 class User extends Domain {
-	public static function create() {
-		return new User;
-	}
+	// public static function create() {
+	// 	echo 'aa';
+	// 	return new User;
+	// }
 }
 
 
