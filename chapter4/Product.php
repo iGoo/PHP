@@ -30,13 +30,30 @@ class ProcessSale {
 
 }
 
-$logger = create_function(
-    '$product',
-    'print " logging ({$product->name}) \n ";'
-);
+class Totalizer {
+    public static function warnAmount($amount) {
+        $count = 0;
+        return function ($product) use (&$count, $amount) {
+            $count += $product->price; 
+            if ($count > $amount) {
+                print "当前金额({$count})已经超过指定金额($amount)";
+            }
+        };   
+    }
+}
+
+// $logger = create_function(
+//     '$product',
+//     'print " logging ({$product->name}) \n ";'
+// );
+
+// $logger2 = function ($product) {
+//     print " logging $product->name \n";
+// };
 
 $processor = new ProcessSale();
-$processor->registerCallback($logger);
+$processor->registerCallback(Totalizer::warnAmount(8));
 $processor->sale(new Product("shoes", 6));
-
 $processor->sale(new Product("coffee", 10));
+
+
