@@ -57,3 +57,4 @@ $processor->sale(new Product("shoes", 6));
 $processor->sale(new Product("coffee", 10));
 
 
+print_r(get_class_vars('Product'));
