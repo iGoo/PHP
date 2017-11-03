@@ -1,5 +1,6 @@
 <?php
 /** http://www.cnblogs.com/lcw/p/3802790.html */
+/** http://www.phppan.com/2010/05/php-design-pattern-3-abstract-factory/ */
 /** 抽象工厂 */
 interface Creator {
     public function factoryMethod();
@@ -38,7 +39,7 @@ class ConcreteProductB implements Product {
 class Client {
     public static function main() {
         $creatorA = new ConcreteCreatorA();
-        $productA = $creatorA->factoryMethod();
+        $productA = $creatorA->factoryMethod(); //抽象**产品**的引用
         $productA->operation();
 
         $creatorB = new ConcreteCreatorB();
