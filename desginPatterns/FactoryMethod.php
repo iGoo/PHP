@@ -6,30 +6,31 @@ interface Creator {
     public function factoryMethod();
 }
 
-/** 具体工厂角色A */
+/** 具体工厂角色A (美的)*/
 class ConcreteCreatorA implements Creator {
     public function factoryMethod() {
         return new ConcreteProductA();
     }
 }
-
+/** 具体工厂角色B (格力)*/
 class ConcreteCreatorB implements Creator {
     public function factoryMethod() {
         return new ConcreteProductB();
     }
 }
 
+/***************************************************/
 interface Product {
     public function operation();
 }
 //这是A产品，会放到ConcreteCreatorA工厂中进行加工生产
-class ConcreteProductA implements Product {
+class Bridge implements Product {
     public function operation() {
         echo '我是Ａ产品' .PHP_EOL;
     }
 }
 //这是B产品，会放到ConcreteCreatorB工厂中进行加工生产
-class ConcreteProductB implements Product {
+class Tv implements Product {
     public function operation() {
         echo '我是B产品' .PHP_EOL;
     }
